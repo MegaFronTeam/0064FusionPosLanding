@@ -53,6 +53,17 @@ class JSCCommon {
 			});
 		});
 
+    Fancybox.defaults = {
+      autoFocus: false,
+      placeFocusBack: false,
+    };
+
+    Fancybox.bind("[data-fancybox]", {
+      autoFocus: false,
+      placeFocusBack: false,
+    });
+
+
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
 			if (!element) return;

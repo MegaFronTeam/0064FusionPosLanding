@@ -1,9 +1,39 @@
-mixin sContent()
+mixin sContent(p1, p2, p3)
 	// start sContent
-	+b.SECTION.sContent.section#sContent&attributes(attributes)
+	+b.SECTION.sContent.section_gray.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
 			+e.row.row
+				+e.col.col-lg-6
+					block
+				+e.col.col-lg-6
+					+contentTitle(p1, p2, p3)
 	// end sContent
+
+mixin sContent2(p1, p2, p3)
+	// start sContent
+	+b.SECTION.sContent.section&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-6
+					block
+				+e.col.col-lg-6
+					+b.section-title
+						+e.top.fw-600= p1
+						h2=p2
+						p=p3
+						+e.btn.btn.btn-primary(href='#') Рекомендуемое оборудование
+
+	// end sContent
+
+mixin contentTitle(small, title, text)
+	+b.section-title
+		if small
+			+e.top.fw-600= small
+		h2=title
+		p=text
+		+e.btn.btn.btn-primary(href='#') Подробнее
+
+mixin imgMockup(i)
+	+e.img-wrap.A(data-fancybox=`gallery-${i}`, href=`img/sContent-bg-${i}.png`)
+		+img("img/sContent-frame.png", 'bg').frame
+		+img(`img/sContent-bg-${i}.png`, 'bg').img

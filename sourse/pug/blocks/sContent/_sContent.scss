@@ -8,20 +8,78 @@
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+    }
+	}
 
-	}
-	.section-title{
-		
-	}
-	&__col{
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  overflow: hidden;
 
-	}
-	&__item{
+  position: relative;
+  &.section_gray {
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 30%;
+      height: 50%;
+      z-index: 0;
+      opacity: .4;
+      filter: blur(50px);
+    }
+    &:before {
+      left: 0;
+      transform: rotate(15deg);
+      background:  linear-gradient(133deg, rgba(0, 0, 0,0) 0%, rgba(0, 156, 243, .8) 80%);
+    }
+    &:after {
+      right: 0;
+      height: 100%;
+      width: 20%;
+      transform: translateX(20%);
+      background:  linear-gradient(208deg, rgba(0, 0, 0, 0) 0%, rgba(0, 156, 243, .8) 50%);
+    }
+  }
 
+	&__img-wrap {
+    @include block(368, 577);
+    max-width: rem(577);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+	.section-title {
+		max-width: rem(478);
 	}
-	&__slide{
-		height: auto;
-	}
+  .img {
+    --border: 1.9vw;
+    @include media-breakpoint-up(lg) {
+      --border: 12px;
+    }
+    z-index: 1;
+    position: absolute;
+    // border-color: black;
+    // border-style: solid;
+    display: inline-block;
+    // border-radius: 15px;
+
+    top: var(--border);
+    left: var(--border);
+    width: calc(100% -  var(--border) * 2);
+    height: calc(100% - var(--border) * 2);
+    object-position: left top;
+  }
+
+  .frame {
+    z-index: 2;
+    position: relative;
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -47,3 +105,28 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContent
+
+.section-title {
+  &__top {
+    margin-bottom: rem(4);
+    @include media-breakpoint-down(lg) {
+      font-size: rem(14);
+    }
+  }
+
+  &__btn {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}
+
+.cards-content-wrapper {
+  .sContent:nth-child(odd) {
+    @include media-breakpoint-up(lg) {
+      .sContent__row {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
