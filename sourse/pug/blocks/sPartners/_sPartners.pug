@@ -1,0 +1,20 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		.container
+			+b.section-title.text-center.bigger
+				h2 Присоединяйтесь #[span к 5000 заведений], которые уже попробовали #[span Fusion]POS
+				p Создайте аккаунт уже сейчас и настраивайте систему бесплатно
+			+e.slider--js.swiper--js
+				.swiper-wrapper
+					- for (var x = 1; x <= 7; x++)
+						+brandCard(x)
+					- for (var x = 1; x <= 7; x++)
+						+brandCard(x)
+			.text-center: +e.btn.btn.btn-primary(href='#') Создать аккаунт
+	// end sPartners
+
+
+mixin brandCard(img)
+	.swiper-slide
+		+b.brand-card: +img(src=`img/svg/brand-${img}.svg`, alt="")

@@ -43,6 +43,18 @@ function eventHandler() {
 		},
 	};
 
+  let brands = new Swiper(".swiper--js", {
+    slidesPerView: 'auto',
+		// freeMode: true,
+		spaceBetween: 4,
+    loop: true,
+    // autoplay: {
+    //   delay: 0,
+    //   disableOnInteraction: false,
+    // },
+    // speed: 5000,
+	});
+
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,

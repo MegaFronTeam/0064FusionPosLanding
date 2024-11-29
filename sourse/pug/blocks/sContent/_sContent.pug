@@ -12,6 +12,7 @@ mixin sContent(p1, p2, p3)
 mixin sContent2(p1, p2, p3)
 	// start sContent
 	+b.SECTION.sContent.section&attributes(attributes)
+		+img(src="img/svg/waves-gray.svg", alt="").waves-gray
 		.container
 			+e.row.row
 				+e.col.col-lg-6
@@ -34,6 +35,65 @@ mixin contentTitle(small, title, text)
 		+e.btn.btn.btn-primary(href='#') Подробнее
 
 mixin imgMockup(i)
-	+e.img-wrap.A(data-fancybox=`gallery-${i}`, href=`img/sContent-bg-${i}.png`)
-		+img("img/sContent-frame.png", 'bg').frame
+	+e.img-wrap.A(data-fancybox=`gallery-${i}`, href=`img/sContent-bg-${i}.png`)&attributes(attributes)
 		+img(`img/sContent-bg-${i}.png`, 'bg').img
+		+img("img/sContent-frame.png", 'bg').frame
+	block
+
+
+mixin imgMockupMob(i)
+	.frame-mob-wrapper
+		+e.img-wrap.frame-mob.A(data-fancybox=`gallery-mob`, href=`img/sContent-bg-mob-${i}.png`)&attributes(attributes)
+			+img(`img/sContent-bg-mob-${i}.png`, 'bg').img
+			+img("img/sContent-frame-mob.png", 'bg').frame
+		+e.img-wrap.frame-mob.A(data-fancybox=`gallery-mob`, href=`img/sContent-bg-mob-${i + 1}.png`)&attributes(attributes)
+			+img(`img/sContent-bg-mob-${i + 1}.png`, 'bg').img
+			+img("img/sContent-frame-mob.png", 'bg').frame
+	block
+
+
+mixin sContent3(p1, p2, p3)
+	// start sContent
+	+b.SECTION.sContent.bg_gr.section&attributes(attributes)
+		.container.container-bigger
+			+e.row.row
+				+e.col.col-lg-6
+					+b.section-title.bigger
+						+e.top.fw-600.d-lg-none= p1
+						h2=p2
+						p=p3
+						.sContent__btn-wrap
+							+e.btn.btn.btn-primary(href='#') Подключить
+							+e.btn.btn.btn-link(href='#') Узнать условия
+				+e.col.col-lg-6
+					+greenCard
+
+mixin greenCard
+	+b.card-aside
+		+e.top
+			+e.title.title-f.text-white ONE FREE
+			+e.price.fw-800 0₽ в мес.*
+		+e.row.row 
+			+e.col.col-md-6 
+				p Единая цена для всех модулей приложения без скрытых платежей и дополнительных покупок
+			+e.col.col-md-6 
+				ul 
+					li Аналитика
+					li Заказы
+					li Доставка
+					li Управление складом
+					li Отчётность
+					li Смены
+		+e.row-cards
+			+innerCard('comment', 'Техподдержка 24/7')
+			+innerCard('globe', 'Бек-офис')
+			+innerCard('cloud', 'Облачное хранилище')
+			+innerCard('download', 'Обновления')
+
+mixin innerCard(i, title, p)
+	+b.inner-card 
+		+e.title.text-white
+			+icon(i)
+			| #{title}
+		.small Контролируйте действия персонала, ситуацию в заведении в любой точке мира
+

@@ -194,6 +194,9 @@ main {
 .fw-300 {
 	font-weight: 300;
 }
+.fw-800 {
+	font-weight: 800;
+}
 
 .fw-500 {
 	font-weight: 500;
@@ -516,7 +519,7 @@ iframe {
   --bs-btn-color: white;
   --bs-btn-bg: #009cf3;
   --bs-btn-border-color: #009cf3;
-  // --bs-btn-hover-color: #000;
+  --bs-btn-hover-color: #f5f5f5;
   // --bs-btn-hover-bg: #26abf5;
   // --bs-btn-hover-border-color: #1aa6f4;
   // --bs-btn-focus-shadow-rgb: 0, 133, 207;
@@ -533,4 +536,8 @@ iframe {
 	@include media-breakpoint-up(md) {
     --bs-btn-padding-x: 24px;
   }
+}
+
+.btn-link {
+  font-weight: 700;
 }

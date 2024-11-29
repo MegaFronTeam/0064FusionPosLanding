@@ -1,26 +1,118 @@
 
 	// start .sContact
 	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+    &:not(.bg-blue) {
+      --sPT: #{rem(56)};
+      --sPB: #{rem(46)};
+      --sTPB: #{rem(0)};
+      @include media-breakpoint-up(lg) {
+        --sPT: #{rem(106)};
+        --sPB: #{rem(86)};
+      }
+    }
 
+	.section-title {
+		p {
+      color: white;
+      margin-bottom: rem(32);
+    }
+    &__btn {
+      width: auto;
+      min-width: rem(148);
+    }
 	}
-	.section-title{
-		
-	}
-	&__col{
 
-	}
-	&__item{
+  .section-title.smaller p {
+    max-width: rem(650);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 rem(28);
+    font-size: rem(16);
+    line-height: 150%;
+  }
 
-	}
-	&__slide{
-		height: auto;
-	}
+  position: relative;
+  overflow: hidden;
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: rem(330);
+    height: rem(330);
+    background: $primary;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    filter: blur(50px);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+	background: linear-gradient(180deg, #009cf3 0%, #005b8d 100%);
+
+	@include media-breakpoint-down(sm) {
+    margin-left: rem(-8);
+    margin-right: rem(-8);
+  }
+
+
+  &__btn {
+    position: absolute;
+    bottom: rem(24);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    min-width: rem(180);
+    @include media-breakpoint-up(lg) {
+      min-width: rem(220);
+      bottom: rem(50);
+    }
+  }
+
+  .img {
+    max-width: 100%;
+    border-left: 11px solid #000;
+    border-right: 11px solid #000;
+    border-top: 11px solid #000;
+    border-radius: 16px 16px 0 0;
+    @include media-breakpoint-up(xl) {
+      margin-left: auto;
+      margin-right: rem(10);
+      display: block;
+      max-width: rem(1220);
+    }
+  }
+
+  &.bg-blue {
+    --sPB: #{rem(0)};
+    --sPT: #{rem(26)};
+    @include media-breakpoint-up(lg) {
+      --sPT: #{rem(58)};
+      --sTPB: #{rem(20)};
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 90%;
+      max-width: rem(848);
+      height: rem(330);
+      background: $primary;
+      top: 100%;
+      left: 50%;
+      border-radius: 100%;
+      filter: blur(20px);
+      transform: translate(-50%, -30%);
+      @include media-breakpoint-up(md) {
+        filter: blur(50px);
+        transform: translate(-50%, -40%);
+      }
+      z-index: 2;
+    }
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -33,12 +125,6 @@
 	
 	//
 	@include media-breakpoint-only(xs) {}
-	@include media-breakpoint-only(sm) {}
-	@include media-breakpoint-only(md) {}
-	@include media-breakpoint-only(lg) {}
-	@include media-breakpoint-only(xl) {}
-	
-	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
@@ -46,3 +132,20 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContact
+
+.btn-light {
+  --bs-btn-color: #{$primary};
+  --bs-btn-bg: white;
+  --bs-btn-border-color: white;
+  --bs-btn-hover-color: #{$primary};
+  --bs-btn-hover-bg: #f8f9fa;
+  --bs-btn-hover-border-color: #f8f9fa;
+  // --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #c6c7c8;
+  // --bs-btn-active-border-color: #babbbc;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #000;
+  // --bs-btn-disabled-bg: #f8f9fa;
+  // --bs-btn-disabled-border-color: #f8f9fa;
+}

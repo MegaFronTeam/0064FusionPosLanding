@@ -1,9 +1,20 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.SECTION.sContact.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+b.section-title.text-center.smaller
+				h2 Плати только когда начинаешь работать
+				p Настраивай склад и меню, обучайся работе с системой FUSIONPOS неограниченное количество времени
+				+e.btn.btn.btn-outline-light(href='#') Подробнее
+	// end sContact
+
+mixin sContact2()
+	// start sContact
+	+b.SECTION.sContact.bg-blue.section&attributes(attributes)
+		.container
+			+b.section-title.text-center.bigger
+				h2 Панель управления
+				p Возможность входа в систему из любого уголка земного шара через разные веб-браузеры. <br>Настройка уровней доступа для пользователей, которым разрешено редактирование. <br>Множество вариантов отчётности для глубокого анализа деятельности ресторанного бизнеса.
+			+img(src="img/sContact-img.png", alt="").img
+		+e.btn.btn.btn-light(href='#') Подробнее
 	// end sContact
