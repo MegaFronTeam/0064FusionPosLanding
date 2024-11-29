@@ -43,7 +43,7 @@ function eventHandler() {
 		},
 	};
 
-  let brands = new Swiper(".swiper--js", {
+  new Swiper(".swiper--js", {
     slidesPerView: 'auto',
 		// freeMode: true,
 		spaceBetween: 4,

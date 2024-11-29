@@ -3,20 +3,20 @@ mixin sCatalog(h2)
 	+b.sCatalog.section&attributes(attributes)
 		+e.slider--js.swiper--js
 			.swiper-wrapper
-				+brandCard('Для фастфуда', '', 6)
-				+brandCard('Для ресторанов', 'Быстрая настройка, управление технологиями настройка, управление', 5)
-				+brandCard('Для кафе', '', 4)
-				+brandCard('Для пекарен', '', 3)
-				+brandCard('Пиццериям', '', 2)
-				+brandCard('Для фудтрака', '', 5)
-				+brandCard('Для кафе', ' Быстрая настройка, управление технологиями настройка, управление', 4)
-				+brandCard('Для пекарен', '', 3)
-				+brandCard('Пиццериям', '', 2)
-				+brandCard('Для фудтрака', '', 5)
+				+productCard('Для фастфуда', '', 6)
+				+productCard('Для ресторанов', 'Быстрая настройка, управление технологиями настройка, управление', 5)
+				+productCard('Для кафе', '', 4)
+				+productCard('Для пекарен', '', 3)
+				+productCard('Пиццериям', '', 2)
+				+productCard('Для фудтрака', '', 5)
+				+productCard('Для кафе', ' Быстрая настройка, управление технологиями настройка, управление', 4)
+				+productCard('Для пекарен', '', 3)
+				+productCard('Пиццериям', '', 2)
+				+productCard('Для фудтрака', '', 5)
 	// end sPartners
 
 
-mixin brandCard(t, p, img)
+mixin productCard(t, p, img)
 	.swiper-slide
 		+b.product-card
 			+e.img-wrap
