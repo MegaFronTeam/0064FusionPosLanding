@@ -140,9 +140,9 @@ main {
 	@include bgs;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
-  border-radius: 16px;
+  border-radius: $border-radius;
 	@include media-breakpoint-up(lg) {
-    border-radius: 12px;
+    border-radius: $border-radius-sm;
   }
 
   margin-bottom: rem(16);
@@ -532,7 +532,7 @@ iframe {
   // --bs-btn-disabled-border-color: #009cf3;
 }
 
-.btn {
+.btn:not(.btn-sm) {
 	@include media-breakpoint-up(md) {
     --bs-btn-padding-x: 24px;
   }

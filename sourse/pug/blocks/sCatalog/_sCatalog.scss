@@ -1,26 +1,22 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+  margin-top: rem(-6);
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-  background: pink;
-	.section-title{
-		
-	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
-		height: auto;
-	}
+	
+  &__slider {
+    overflow: visible;
+  }
+  .swiper-slide {
+    width: auto;
+    height: auto;
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -33,22 +29,53 @@
 
 
 
-.product-item{
+.product-card {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
-	overflow: hidden;
-	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
-	}
-	&__caption{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		padding: rem(20);
-	}
+  justify-content: space-between;
+  gap: rem(10);
+	height: 100%;
+  border-radius: $border-radius-sm;
+  --pad: 24px;
+  padding: var(--pad);
+  min-height: rem(195);
+  background: $gray-800;
+  max-width: rem(220);
+  position: relative;
+  overflow: hidden;
+
+  .h5 {
+    margin-bottom: rem(8);
+  }
+
+  .img {
+    object-position: top left;
+  }
+
+  &__img-wrap {
+    position: absolute;
+    bottom: calc( var(--pad) * -1);
+    right: calc(var(--pad) * -1);
+    transform: translate(2%, 20%);
+    width: 115px;
+    height: 115px;
+    max-width: 50%;
+  }
+}
+
+.btn-dark {
+  --bs-btn-color: #{$primary};
+  --bs-btn-bg: #353535;
+  --bs-btn-border-color: #353535;
+  --bs-btn-hover-color: #e1e1e1;
+  --bs-btn-hover-bg: #3f3f3f;
+  --bs-btn-hover-border-color: #343434;
+  // --bs-btn-focus-shadow-rgb: 63, 63, 63;
+  // --bs-btn-active-color: #fff;
+  // --bs-btn-active-bg: #4a4a4a;
+  // --bs-btn-active-border-color: #343434;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  // --bs-btn-disabled-color: #fff;
+  // --bs-btn-disabled-bg: #1d1d1d;
+  // --bs-btn-disabled-border-color: #1d1d1d;
 }

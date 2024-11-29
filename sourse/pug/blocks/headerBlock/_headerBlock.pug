@@ -7,5 +7,11 @@ mixin headerBlock()
 				+icon('telegram')
 				+iconC('telegram')
 			.row
-						
+			+storesIcons
 	// end headerBlock
+
+mixin storesIcons 
+	+b.stores-icons
+		- for (var x = 5; x >= 1; x--)
+			+e.img-wrap(href='#')
+				+img(src=`img/svg/store-${x}.svg`, alt="")

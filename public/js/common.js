@@ -47,7 +47,7 @@ function eventHandler() {
     slidesPerView: 'auto',
 		// freeMode: true,
 		spaceBetween: 4,
-    loop: true,
+    // loop: true,
     // autoplay: {
     //   delay: 0,
     //   disableOnInteraction: false,

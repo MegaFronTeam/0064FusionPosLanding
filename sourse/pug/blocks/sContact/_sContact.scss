@@ -78,7 +78,7 @@
     border-left: 11px solid #000;
     border-right: 11px solid #000;
     border-top: 11px solid #000;
-    border-radius: 16px 16px 0 0;
+    border-radius: $border-radius $border-radius 0 0;
     @include media-breakpoint-up(xl) {
       margin-left: auto;
       margin-right: rem(10);
