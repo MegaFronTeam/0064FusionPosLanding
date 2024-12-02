@@ -84,12 +84,18 @@ body {
     overflow: hidden;
     /* Other browsers */
     overscroll-behavior: none;
+    @include media-breakpoint-up(lg) {
+      header .col-auto {
+        opacity: .4;
+        pointer-events: none;
+      }
+    }
 
 		&::before {
 			z-index: 999;
 			opacity: 0.76;
       @include media-breakpoint-up(lg) {
-        opacity: 0;
+        // opacity: 0;
       }
 		}
 	}

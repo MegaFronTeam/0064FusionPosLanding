@@ -32,6 +32,11 @@
     }
 	}
 
+  .col-auto:not(:first-child) {
+    // transition: opacity .3s;
+  }
+
+
 	.col.order-lg-0 {
     margin: 0;
     padding: 0;

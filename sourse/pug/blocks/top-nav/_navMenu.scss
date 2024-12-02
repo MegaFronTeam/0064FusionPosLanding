@@ -44,9 +44,8 @@
   @include media-breakpoint-up(xxl) {
     pointer-events: none;
   }
-  
-    background: $primary;
-  
+
+  background: $primary;
   border-radius: 8px;
 	& {
 		--h: #{em(2)};
@@ -100,6 +99,7 @@
 		backface-visibility: hidden;
 		transform-origin: 50% 50%;
 	}
+  transition: opacity .3s;
 
 }
 @include media-breakpoint-down(xxl) {
@@ -108,7 +108,7 @@
 		will-change: transform;
 		& {
 			position: fixed !important;
-			z-index: 999;
+			z-index: 1002;
 			max-width: 85%;
 			// height: calc(var(--vh, 1vh) * 100);
 			// height: 100vh;
