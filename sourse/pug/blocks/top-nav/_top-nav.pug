@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js&attributes(attributes)
 		span
 mixin mob-mnu()
 	-
@@ -20,15 +20,30 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
+		<svg class="angle angle-left" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
+		</svg>
+		.container-fluid
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col-auto
+					+menu-toggle()
+				.col-auto
+					+e.logo-wrap.A(href='#'): +img(src="img/svg/logo.svg", alt="")
+					<svg class="angle angle-center" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
+					</svg>
+				.col.order-lg-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+menu-toggle()
+							+menu-toggle().d-xxl-none
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							a.d-md-none.tel(href="tel:88007757427") 8 (800) 775-74-27
+				.col-auto
+					+e.links-wrap 
+						a.tel(href="tel:88007757427") 8 (800) 775-74-27
+						a(href="#"): +img(src="img/svg/whatsapp.svg", alt="")
+						a(href="#"): +img(src="img/svg/telegram.svg", alt="")
+						a(href="#"): +img(src="img/svg/viber.svg", alt="")
+				.col-auto
+					+e.btn.btn.btn-primary(href='#') Войти
 	// end top-nav

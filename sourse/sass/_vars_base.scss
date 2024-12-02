@@ -15,7 +15,7 @@ $rfs-breakpoint: 1200px !default;
 //   'black': $body-color,
 // ) !default;
 
-@include font-face ("Panton", $addr + "Panton-Trial-ExtraBold", $file-formats: $file-format);
+@include font-face ("Panton", $addr + "Panton-ExtraBold", $file-formats: $file-format);
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ; 
 

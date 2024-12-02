@@ -1,11 +1,12 @@
 // start .sPartners
 .sPartners {
 	--sPT: #{rem(60)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(30)};
 	--sTPB: #{rem(44)};
 	@include media-breakpoint-up(lg) {
     --sPT: #{rem(106)};
     --sTPB: #{rem(40)};
+    --sPB: #{rem(96)};
   }
 	
 	&__row{

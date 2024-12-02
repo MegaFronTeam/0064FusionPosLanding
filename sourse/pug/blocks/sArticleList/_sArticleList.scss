@@ -1,13 +1,18 @@
 // start .sArticleList
 .sArticleList {
-	// --sPT: #{rem(20)};
+	--sPT: #{rem(36)};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(6)};
   @include media-breakpoint-up(md) {
     --sTPB: #{rem(40)};
+    --sPT: #{rem(100)};
   }
   @include media-breakpoint-up(lg) {
     --sTPB: #{rem(54)};
+  }
+  @include media-breakpoint-down(md) {
+    --sPB: #{rem(10)};
+
   }
 
 	h2 {
@@ -134,3 +139,9 @@
   }
 }
 
+
+@include media-breakpoint-up(md) {
+  .dd-group__content {
+    display: block !important;
+  }
+}

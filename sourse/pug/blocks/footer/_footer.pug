@@ -1,9 +1,63 @@
 mixin footer()
-	+b.FOOTER.footer.section
+	+b.FOOTER.footer.section.section_gray-bg
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				+e.col.col-lg-6
+					+e.item: +e.logo-wrap.A(href='#'): +img(src="img/svg/logo.svg", alt="")
+					+e.item 
+						+e.item-title Телефон
+						+e.link.A(href="tel:+88007757427") 8 (800) 775-74-27
+					+e.item 
+						+e.item-title E-mail
+						+e.link.A(href="mailto:info@fusion.pos") info@fusion.pos
+					+e.item 
+						+e.item-title Адрес
+						+e.link.A(href="#") Ростов-на-Дону, ул Ширишкина, 24 
+					+e.item 
+						+e.item-title Наши соц.сети
+						+e.social-wrap 
+							a(href="#"): +icon('youtube')
+							a(href="#"): +icon('tg')
+							a(href="#"): +icon('vk')
+					+e.item.item-bottom
+						a(href="") Политика конфиденциальности
+						a(href="") Пользовательское соглашение
+						.copyr © 2014-2024. Все права защищены
+				+e.col.col-lg-6.d-none.d-lg-block
+					+e.inner-row.row
+						.col-auto
+							+e.inner-title Для кого
+							ul
+								li: a(href="#") Ресторан
+								li: a(href="#") Кофейня
+								li: a(href="#") Пиццерия
+								li: a(href="#") Кафе
+								li: a(href="#") Пекарня
+								li: a(href="#") Фастфуд
+								li: a(href="#") Кальянная
+								li: a(href="#") Столовая
+								li: a(href="#") Фудтрак
+								li: a(href="#") Бар
+								li: a(href="#") Магазин
+						.col-auto
+							+e.inner-title Fusion POS
+							ul
+								li: a(href="#") Тур по продукту
+								li: a(href="#") Тарифы
+								li: a(href="#") Оборудование
+								li: a(href="#") Загрузки
+								li: a(href="#") Наши клиенты
+							+e.inner-title Fusion POS
+							ul
+								li: a(href="#") О нас
+								li: a(href="#") СМИ о нас
+								li: a(href="#") Партнеры
+								li: a(href="#") Сайты партнеры
+								li: a(href="#") Контакты
+								li: a(href="#") Помощь
+						.col-auto
+							+e.inner-title Блог
+							ul
+								li: a(href="#") Новости Fusion POS
+								li: a(href="#") Новости HoReCa
+								li: a(href="#") Обучение

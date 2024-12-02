@@ -62,17 +62,20 @@ mixin sContent3(p1, p2, p3)
 						+e.top.fw-600.d-lg-none= p1
 						h2=p2
 						p=p3
-						.sContent__btn-wrap
+						.sContent__btn-wrap.d-none.d-lg-block
 							+e.btn.btn.btn-primary(href='#') Подключить
 							+e.btn.btn.btn-link(href='#') Узнать условия
 				+e.col.col-lg-6
 					+greenCard
-
+				+e.col.d-lg-none
+					.sContent__btn-wrap
+						+e.btn.btn.btn-primary(href='#') Подключить
+						+e.btn.btn.btn-link(href='#') Узнать условия
 mixin greenCard
 	+b.card-aside
 		+e.top
 			+e.title.title-f.text-white ONE FREE
-			+e.price.fw-800 0₽ в мес.*
+			+e.price.title-f.fw-800 0₽ в мес.*
 		+e.row.row 
 			+e.col.col-md-6 
 				p Единая цена для всех модулей приложения без скрытых платежей и дополнительных покупок

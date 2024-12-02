@@ -1,12 +1,18 @@
 .menu {
 	& {
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			display: flex;
-			text-align: center;
 			@include roww(20px);
-			flex-wrap: wrap;
+			// flex-wrap: wrap;
 		}
 	}
+  @include media-breakpoint-up(xxl) {
+    text-align: center;
+    margin-left: rem(18);
+    margin-top: rem(8);
+    margin-bottom: rem(8);
+  }
+
 
 	& {
 		list-style: none;
@@ -21,22 +27,42 @@
 	}
 	a {
 		display: block;
-		padding: rem(20) calc(var(--bs-gutter-x) / 2);
+		padding: rem(20) rem(16);
+    color: white;
+    font-size: rem(14);
+    font-weight: 600;
+    &:hover {
+      color: $primary;
+    }
 	}
 }
 
 .toggle-menu-mobile {
+  @include media-breakpoint-up(lg) {
+    border-radius: 12px;
+  }
+  @include media-breakpoint-up(xxl) {
+    pointer-events: none;
+  }
+  
+    background: $primary;
+  
+  border-radius: 8px;
 	& {
 		--h: #{em(2)};
-		--color: #{$primary};
+		--color: #{$white};
 		--position: calc(var(--h) * 2);
 
 		display: block;
-		height: calc(var(--h) * 12);
+		height: calc(var(--h) * 10);
 		position: relative;
 		font-size: 32px;
-		width: 1em;
+		width: 40px;
 		cursor: pointer;
+    @include media-breakpoint-up(lg) {
+      width: rem(61);
+      height: rem(72);
+    }
 	}
 	span:after,
 	span:before {
@@ -47,6 +73,7 @@
 	span {
 		@include a-cent(y);
 		display: block;
+		@include a-cent(x);
 	}
 
 	span:before {
@@ -62,24 +89,20 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
-		height: var(--h);
+		width: .6em;
+    @include media-breakpoint-up(lg) {
+      width: .75em;
+    }
+		height: calc(var(--h) / 2);
+    border-radius: rem(11);
 		background-color: var(--color);
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		transform-origin: 50% 50%;
 	}
 
-	&.on span {
-		--color: transparent;
-	}
-
-	&.on {
-		--position: 0;
-		--rotate: 45deg;
-	}
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xxl) {
 	.menu-mobile {
 		@include mt(0.6s);
 		will-change: transform;
@@ -91,7 +114,6 @@
 			// height: 100vh;
 			width: 280px;
 			top: 0;
-			// left: 0;
 			right: 0;
 			background-color: $body-bg;
 		}
@@ -113,6 +135,7 @@
 			color: #fff;
 			top: 10px;
 			z-index: 9999;
+      background: transparent;
 			span:after,
 			span:before {
 				--color: #ffffff;
@@ -128,6 +151,15 @@
 			// @include mt(.3s);
 			// transition-delay: .4s;
 			// opacity: var(--opacity);
+
+      .toggle-menu-mobile.on span {
+        --color: transparent;
+      }
+    
+      .toggle-menu-mobile.on {
+        --position: 0;
+        --rotate: 45deg;
+      }
 		}
 
 		&.active {
@@ -138,6 +170,7 @@
 
 		ul {
 			position: relative;
+      margin-bottom: rem(20);
 		}
 
 		li {
@@ -152,5 +185,6 @@
 				display: block;
 			}
 		}
+
 	}
 }

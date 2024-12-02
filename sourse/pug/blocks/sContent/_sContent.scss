@@ -27,12 +27,11 @@
   }
 
   position: relative;
+  @include media-breakpoint-up(xxl) {
+    height: rem(588);
+  }
   &.section_gray {
     overflow: hidden;
-
-    @include media-breakpoint-up(xxl) {
-      height: rem(588);
-    }
 
     &:before, &:after {
       content: '';
@@ -75,6 +74,7 @@
   &.bg_gr {
     position: relative;
     overflow: hidden;
+    height: auto;
 
     @include media-breakpoint-up(lg) {
       --sPT: #{rem(16)};
@@ -115,13 +115,15 @@
 
   &__content-wrap {
     position: relative;
-    margin-bottom: rem(36);
+    margin-bottom: rem(40);
+    margin-top: rem(26);
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
+      margin-top: 0;
     }
     img {
       @include media-breakpoint-down(lg) {
-        max-width: 90%;
+        max-width: 96%;
       }
     }
 
@@ -186,6 +188,7 @@
       border-radius: rem(62);
     }
   }
+
   .frame-mob-wrapper {
     position: relative;
     @include media-breakpoint-up(lg) {
@@ -257,10 +260,7 @@
     }
     z-index: 1;
     position: absolute;
-    // border-color: black;
-    // border-style: solid;
     display: inline-block;
-    // border-radius: 15px;
 
     top: var(--border);
     left: var(--border);
@@ -409,6 +409,14 @@
 // .sContent 3
 .sContent {
   &__btn-wrap {
+    @include media-breakpoint-down(md) {
+      .btn {
+        width: 100%;
+        &:last-child {
+          margin-top: rem(16);
+        }
+        }
+    }
     @include media-breakpoint-up(md) {
       .btn:last-child {
         margin-left: rem(16);
@@ -420,13 +428,10 @@
     }
   }
   .container-bigger {
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(lg) {
       margin-right: 0;
       max-width: 1351px;
     }
-    // @include media-breakpoint-up(xl) {
-    //   max-width: 1351px;
-    // }
   }
 
 }
@@ -436,6 +441,9 @@
   border-radius: $border-radius-sm;
   --pad: 16px;
   padding: var(--pad);
+  @include media-breakpoint-down(md) {
+    margin-top: rem(-16);
+  }
   @include media-breakpoint-up(lg) {
     --pad: 26px;
   }
@@ -445,7 +453,7 @@
 
   &__row {
     @include media-breakpoint-up(lg) {
-      margin-bottom: rem(16);
+      margin-bottom: rem(8);
     }
   }
 
@@ -498,8 +506,11 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }
-  }
 
+    @include media-breakpoint-down(md) {
+      margin-right: calc(var(--pad) * -1);
+    }
+  }
 }
 
 
@@ -513,7 +524,7 @@
   background: #5bbc5b;
   border-radius: $border-radius-sm;
   height: auto;
-  padding: rem(16);
+  padding: rem(14) rem(16);
   width: rem(209);
   flex-shrink: 0;
   @include media-breakpoint-up(md) {
@@ -531,6 +542,7 @@
     color: #404040;
   }
 }
+
 .section-title.bigger {
   h2 {
     @include media-breakpoint-up(xl) {

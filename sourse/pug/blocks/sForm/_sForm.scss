@@ -1,26 +1,66 @@
 
 	// start .sForm
 	.sForm {
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+		// --sPT: #{rem(30)};
+	// --sPB: #{rem(40)};
+	--sTPB: #{rem(30)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	@include media-breakpoint-up(lg) {
+    --pad: 56px;
+    padding-right: var(--pad);
+		--sPT: #{rem(16)};
+    --sPB: #{rem(16)};
+  }
 
-	}
-	.section-title{
-		
-	}
-	&__col{
+  .inner-wrap {
+    @include media-breakpoint-up(lg) {
+      max-width: rem(576);
+      margin: rem(45) 0;
+    }
+  }
 
-	}
-	&__item{
+  .container {
+    @include media-breakpoint-up(lg) {
+      // margin-right: 0;
+      max-width: 1301px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
 
+  .form-wrap {
+    &__btn {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(lg) {
+        --bs-btn-padding-x: #{rem(45)};
+      }
+    }
+  }
+
+	&__img-wrap{
+    position: relative;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    @include media-breakpoint-up(lg) {
+      margin-right: -56px;
+      // margin-top: calc(var(--pad) * -1);
+      // margin-bottom: calc(var(--pad) * -1);
+    }
+
+    img {
+      z-index: 2;
+      object-position: top;
+    }
 	}
-	&__slide{
-		height: auto;
-	}
+	
+  background: $gray-800;
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

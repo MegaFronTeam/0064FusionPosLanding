@@ -1,13 +1,42 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock.section_gray-bg.section#headerBlock&attributes(attributes)
+		+img(src="img/svg/waves-gray.svg", alt="").waves-gray
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-			+storesIcons
+			+e.row.row
+				+e.col.col-lg-7.order-lg-last
+					+e.imgs
+						.frame-mob-wrapper
+							+e.img-wrap.frame-mob.A(data-fancybox=`gallery-main`, href=`img/sContent-bg-mob-1.png`)
+								+img(`img/sContent-bg-mob-1.png`, 'bg').img
+								+img("img/sContent-frame-mob.png", 'bg').frame
+						+e.img-wrap.A(data-fancybox=`gallery-main`, href=`img/sContent-bg-1.png`)
+							+img(`img/sContent-bg-1.png`, 'bg').img
+							+img("img/sContent-frame.png", 'bg').frame
+				+e.col.col-lg-5
+					+b.section-title.item
+						h1 Облачная программа автоматизации HoReCa за #[span 0₽ в мес.*]
+					+e.text-wrap.item
+						p Одна POS-система позволит решить все вопросы: 
+						p онлайн-касса, склад, финансы, аналитика,
+						p CRM и программы лояльности
+					.item: +e.btn.btn.btn-primary(href='#') Попробовать бесплатно
+					.item: .small * Только % от объема продаж
+					+e.bottom-item.item
+						+e.info-item 
+							+icon('poker')
+							.text Круглосуточная поддержка
+						+e.info-item 
+							+icon('clock')
+							.text 9:00 - 18:00 Отдел продаж
+	.stores-wrap
+		+storesIcons
+		<svg class="angle angle-right" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
+		</svg>
+		<svg class="angle angle-left" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
+		</svg>
 	// end headerBlock
 
 mixin storesIcons 
