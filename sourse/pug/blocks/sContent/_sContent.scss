@@ -195,6 +195,12 @@
       margin-left: 10%;
       min-height: rem(370);
     }
+    .img {
+      border-width: 6px;
+      @include media-breakpoint-up(lg) {
+        border-radius: rem(30);
+      }
+    }
 
     .frame-mob:first-child {
       width: 62%;
@@ -253,19 +259,24 @@
       }
     }
 	}
+  
   .img {
-    --border: 1.9vw;
-    @include media-breakpoint-up(lg) {
-      --border: 12px;
-    }
     z-index: 1;
     position: absolute;
-    display: inline-block;
 
-    top: var(--border);
-    left: var(--border);
-    width: calc(100% -  var(--border) * 2);
-    height: calc(100% - var(--border) * 2);
+    top: 0;
+    left: 0;
+    border: 9px solid transparent;
+    @include media-breakpoint-up(sm) {
+      border-width: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+      border-width: 14px;
+      border-radius: 28px;
+    }
+    @include media-breakpoint-up(xl) {
+      border-width: 18px;
+    }
     object-position: left top;
   }
 

@@ -1,12 +1,12 @@
 {
 	"nav":[
-		{ "name":"Возможности", "url":"#"},
-		{	"name":"Оборудование", "url":"#"},
-		{"name":"Тарифы", "url":"#"},
-		{"name":"Контакты", "url":"#"} ,
+		{ "name":"Возможности", "url":"#sContent"},
+		{	"name":"Оборудование", "url":"#sContent2"},
+		{"name":"Тарифы", "url":"#sContent3"},
+		{"name":"Контакты", "url":"#sForm"} ,
 		{
 			"name":"Помощь", 
-			"url":"#"
+			"url":"#sArticleList"
 			}
 	],
 	"social":[

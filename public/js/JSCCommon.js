@@ -300,7 +300,8 @@ class JSCCommon {
 				$(this).attr("href", "/" + elementClick);
 			} else {
 				let destination = $(elementClick).offset().top;
-				$("html, body").animate({scrollTop: destination - 80}, 0);
+				$("html, body").animate({scrollTop: destination - 40}, 0);
+        JSCCommon.closeMenu()
 				return false;
 			}
 		});
@@ -434,7 +435,7 @@ class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-		// JSCCommon.animateScroll();
+		JSCCommon.animateScroll();
 
 		// JSCCommon.CustomInputFile();
 	}
