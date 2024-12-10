@@ -8,8 +8,12 @@
 
 	@include media-breakpoint-up(lg) {
     margin: 0 rem(16);
-    margin-bottom: rem(30);
+    margin-bottom: rem(170);
     width: calc(100% - 32px);
+
+    &::before {
+      content: none !important;
+    }
   }
 	@include media-breakpoint-up(lg) {
     --sPT: #{rem(56)};

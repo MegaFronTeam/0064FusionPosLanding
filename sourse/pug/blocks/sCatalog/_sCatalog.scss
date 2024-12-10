@@ -1,8 +1,7 @@
 // start .sCatalog
 .sCatalog {
-	--sPT: #{rem(0)};
+	--sPT: #{rem(16)};
 	--sPB: #{rem(0)};
-  margin-top: rem(-6);
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -11,7 +10,7 @@
 	}
 	
   &__slider {
-    overflow: visible;
+    border-radius: $border-radius-sm;
   }
   .swiper-slide {
     width: auto;

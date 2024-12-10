@@ -1,14 +1,11 @@
 
 	// start .sContact
 	.sContact {
-    &:not(.bg-blue) {
-      --sPT: #{rem(56)};
-      --sPB: #{rem(46)};
-      --sTPB: #{rem(0)};
-      @include media-breakpoint-up(lg) {
-        --sPT: #{rem(106)};
-        --sPB: #{rem(110)};
-      }
+    --sPB: #{rem(0)};
+    --sPT: #{rem(26)};
+    @include media-breakpoint-up(lg) {
+      --sPT: #{rem(58)};
+      --sTPB: #{rem(20)};
     }
 
 	.section-title {
@@ -22,6 +19,13 @@
     }
 	}
 
+  .h2  {
+    @include media-breakpoint-up(lg) {
+      font-size: rem(64);
+      line-height: 100%;
+    }
+  }
+
   .section-title.smaller p {
     max-width: rem(650);
     margin-left: auto;
@@ -29,6 +33,11 @@
     padding: 0 rem(28);
     font-size: rem(16);
     line-height: 150%;
+  }
+  .smaller {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(63);
+    }
   }
 
   position: relative;
@@ -101,12 +110,6 @@
   }
 
   &.bg-blue {
-    --sPB: #{rem(0)};
-    --sPT: #{rem(26)};
-    @include media-breakpoint-up(lg) {
-      --sPT: #{rem(58)};
-      --sTPB: #{rem(20)};
-    }
     &:before {
       content: '';
       position: absolute;

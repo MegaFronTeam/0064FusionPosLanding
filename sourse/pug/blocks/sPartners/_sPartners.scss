@@ -4,9 +4,9 @@
 	--sPB: #{rem(30)};
 	--sTPB: #{rem(44)};
 	@include media-breakpoint-up(lg) {
-    --sPT: #{rem(106)};
+    --sPT: #{rem(160)};
     --sTPB: #{rem(40)};
-    --sPB: #{rem(96)};
+    --sPB: #{rem(160)};
   }
 	
 	&__row{
@@ -29,10 +29,33 @@
 	}
 
   &__slider {
-    overflow: visible;
     margin-bottom: rem(48);
+    position: relative;
     @include media-breakpoint-up(lg) {
       margin-bottom: rem(72);
+    }
+    @include media-breakpoint-down(lg) {
+      overflow: visible;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        height: 100%;
+        width: 150px;
+        background: linear-gradient(270deg, #1d1d1d 24.64%, rgba(29, 29, 29, 0) 100%);
+      }
+
+      &::before {
+        left: -2px;
+        transform: rotate(180deg);
+      }
+      &::after {
+        right: -2px;
+      }
     }
   }
 

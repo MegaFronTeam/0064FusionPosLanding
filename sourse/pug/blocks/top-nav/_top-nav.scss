@@ -136,26 +136,6 @@
     }
   }
 
-  .angle {
-    position: absolute;
-    z-index: 3;
-    transform: rotate(180deg);
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
-  }
-  .angle-left {
-    left: 12px;
-    top: calc(100% + 2px);
-  }
-
-  .angle-center {
-    top: 0px;
-    left: 298px;
-  }
-
-
-
 	@include media-breakpoint-up(sm) {}
 	
 	@include media-breakpoint-up(xs) {}

@@ -43,17 +43,28 @@ function eventHandler() {
 		},
 	};
 
-  new Swiper(".swiper--js", {
-    slidesPerView: 'auto',
-		// freeMode: true,
-		spaceBetween: 4,
-    // loop: true,
-    // autoplay: {
-    //   delay: 0,
-    //   disableOnInteraction: false,
-    // },
-    // speed: 5000,
-	});
+  const sliders = document.querySelectorAll('.swiper--js')
+  if(sliders.length) {
+    sliders.forEach(slider => {
+
+      new Swiper(slider, {
+        slidesPerView: 'auto',
+        // freeMode: true,
+        spaceBetween: 4,
+        // loop: true,
+        // autoplay: {
+        //   delay: 0,
+        //   disableOnInteraction: false,
+        // },
+        // speed: 5000,
+        navigation: {
+          nextEl: slider.querySelector(".swiper-button-next"),
+          prevEl: slider.querySelector(".swiper-button-prev"),
+        },
+      });
+    })
+  }
+
 
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
@@ -61,16 +72,6 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
-	const swiper4 = new Swiper(".sBanners__slider--js", {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: "auto",
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

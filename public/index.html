@@ -30,7 +30,7 @@
 			<main>
 				<div class="header-wrap">
 					<!-- start headerBlock-->
-					<div class="headerBlock section_gray-bg section" id="headerBlock"><img class="waves-gray" src="img/svg/waves-gray.svg" alt="" loading="lazy"/>
+					<div class="headerBlock section" id="headerBlock"><img class="waves-gray" src="img/svg/waves-gray.svg" alt="" loading="lazy"/>
 						<div class="container">
 							<div class="headerBlock__row row">
 								<div class="headerBlock__col col-lg-7 order-lg-last">
@@ -101,6 +101,16 @@
 				<!-- start sCatalog-->
 				<div class="sCatalog section d-none d-lg-block">
 					<div class="sCatalog__slider sCatalog__slider--js swiper swiper--js">
+						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="product-card">
@@ -306,7 +316,7 @@
 				<section class="sContact section">
 					<div class="container">
 						<div class="section-title text-center smaller">
-							<h2>Плати только когда начинаешь работать</h2>
+							<div class="h2">Плати только когда начинаешь работать</div>
 							<p>Настраивай склад и меню, обучайся работе с системой FUSIONPOS неограниченное количество времени</p>
 							<a class="section-title__btn btn btn-outline-light" href="#">Подробнее
 							</a>
@@ -320,7 +330,7 @@
 						<div class="container">
 							<div class="sContent__row row">
 								<div class="sContent__col col-lg-6">
-									<a class="sContent__img-wrap green-circle left" data-fancybox="gallery-3" href="img/sContent-bg-3.png"><img class="object-fit-js img" src="img/sContent-bg-3.png" alt="" loading="lazy"/><img class="object-fit-js frame" src="img/sContent-frame.png" alt="" loading="lazy"/>
+									<a class="sContent__img-wrap" data-fancybox="gallery-3" href="img/sContent-bg-3.png"><img class="object-fit-js img" src="img/sContent-bg-3.png" alt="" loading="lazy"/><img class="object-fit-js frame" src="img/sContent-frame.png" alt="" loading="lazy"/>
 									</a><img class="waves right" src="img/svg/waves.svg" alt="" loading="lazy"/>
 								</div>
 								<div class="sContent__col col-lg-6">
@@ -342,7 +352,7 @@
 						<div class="container">
 							<div class="sContent__row row">
 								<div class="sContent__col col-lg-6">
-									<a class="sContent__img-wrap green-circle right" data-fancybox="gallery-4" href="img/sContent-bg-4.png"><img class="object-fit-js img" src="img/sContent-bg-4.png" alt="" loading="lazy"/><img class="object-fit-js frame" src="img/sContent-frame.png" alt="" loading="lazy"/>
+									<a class="sContent__img-wrap" data-fancybox="gallery-4" href="img/sContent-bg-4.png"><img class="object-fit-js img" src="img/sContent-bg-4.png" alt="" loading="lazy"/><img class="object-fit-js frame" src="img/sContent-frame.png" alt="" loading="lazy"/>
 									</a><img class="waves left" src="img/svg/waves.svg" alt="" loading="lazy"/>
 								</div>
 								<div class="sContent__col col-lg-6">
@@ -436,7 +446,7 @@
 								<div class="section-title bigger">
 									<div class="section-title__top fw-600 d-lg-none">Приложение руководителя
 									</div>
-									<h2>Плати только когда начинаешь работать</h2>
+									<div class="h2">Плати только когда начинаешь работать</div>
 									<p>Настраивай склад и меню, обучайся работе с системой FUSIONPOS неограниченное количество времени</p>
 									<div class="sContent__btn-wrap d-none d-lg-block">
 										<a class="section-title__btn btn btn-primary" href="#">Подключить
@@ -523,66 +533,68 @@
 							<h2>Присоединяйтесь <span>к 5000 заведений</span>, которые уже попробовали <span>Fusion</span>POS</h2>
 							<p>Создайте аккаунт уже сейчас и настраивайте систему бесплатно</p>
 						</div>
-						<div class="sPartners__slider sPartners__slider--js swiper swiper--js">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-1.svg" alt="" loading="lazy"/>
-									</div>
+					</div>
+					<div class="sPartners__slider sPartners__slider--js swiper swiper--js">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-1.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-2.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-2.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-3.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-3.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-4.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-4.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-5.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-5.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-6.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-6.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-7.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-7.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-1.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-1.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-2.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-2.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-3.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-3.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-4.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-4.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-5.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-5.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-6.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-6.svg" alt="" loading="lazy"/>
 								</div>
-								<div class="swiper-slide">
-									<div class="brand-card"><img src="img/svg/brand-7.svg" alt="" loading="lazy"/>
-									</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="brand-card"><img src="img/svg/brand-7.svg" alt="" loading="lazy"/>
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="container">
 						<div class="text-center">
 							<a class="sPartners__btn btn btn-primary" href="#">Создать аккаунт
 							</a>

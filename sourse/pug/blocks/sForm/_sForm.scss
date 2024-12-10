@@ -49,6 +49,7 @@
     overflow: hidden;
     @include media-breakpoint-up(lg) {
       margin-right: -56px;
+      border-radius: 35px;
       // margin-top: calc(var(--pad) * -1);
       // margin-bottom: calc(var(--pad) * -1);
     }

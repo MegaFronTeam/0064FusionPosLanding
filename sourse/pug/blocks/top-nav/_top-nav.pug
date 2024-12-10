@@ -20,18 +20,12 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		<svg class="angle angle-left" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
-		</svg>
 		.container-fluid
 			+e.row.row
-				.col-auto
+				.col-auto.d-xxl-none
 					+menu-toggle()
 				.col-auto
 					+e.logo-wrap.A(href='#'): +img(src="img/svg/logo.svg", alt="")
-					<svg class="angle angle-center" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 12H12V0C10.3658 7.84823 7.57161 10.2903 0 12Z" fill="#1D1D1D" />
-					</svg>
 				.col.order-lg-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
