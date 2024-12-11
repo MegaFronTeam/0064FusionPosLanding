@@ -39,6 +39,13 @@
   .swiper-slide {
     width: auto;
     height: auto;
+
+    &:first-child .product-card {
+      margin-left: rem(50);
+    }
+    &:last-child .product-card {
+      margin-right: rem(50);
+    }
   }
 
   position: relative;
