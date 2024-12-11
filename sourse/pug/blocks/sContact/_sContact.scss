@@ -7,6 +7,10 @@
       --sPT: #{rem(58)};
       --sTPB: #{rem(20)};
     }
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(100);
+      margin-bottom: rem(64);
+    }
 
 	.section-title {
 		p {
@@ -35,7 +39,10 @@
     line-height: 150%;
   }
   .smaller {
+    margin-top: rem(30);
+    margin-bottom: rem(50);
     @include media-breakpoint-up(lg) {
+      margin-top: rem(0);
       margin-bottom: rem(63);
     }
   }
@@ -128,6 +135,11 @@
       }
       z-index: 2;
     }
+
+    
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(115);
+    }
   }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -165,3 +177,9 @@
   // --bs-btn-disabled-bg: #f8f9fa;
   // --bs-btn-disabled-border-color: #f8f9fa;
 }
+
+  .section-title.bigger h2 {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(16);
+    }
+  }

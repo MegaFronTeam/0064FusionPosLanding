@@ -3,16 +3,14 @@
 	--sPT: #{rem(36)};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(6)};
+  --sPB: #{rem(10)};
   @include media-breakpoint-up(md) {
     --sTPB: #{rem(40)};
-    --sPT: #{rem(100)};
+    --sPT: #{rem(60)};
+    --sPB: #{rem(50)};
   }
   @include media-breakpoint-up(lg) {
     --sTPB: #{rem(54)};
-  }
-  @include media-breakpoint-down(md) {
-    --sPB: #{rem(10)};
-
   }
 
 	h2 {
@@ -24,12 +22,34 @@
       text-align: center;
     }
 	}
-	&__col{
-		
-	}
-	&__item{
-		
-	}
+	.container {
+    position: relative;
+    z-index: 2;
+  }
+  position: relative;
+  &:after, &:before {
+    @include media-breakpoint-up(lg) {
+      content: '';
+      width: 30vw;
+      @include block(1,1);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 0;
+      opacity: .15;
+      filter: blur(120px);
+      background: $primary;
+    }
+  }
+  &:after {
+    top: 0;
+    right: 0;
+    transform: translate(40%, -40%);
+  }
+  &:before {
+    left: 0;
+    bottom: 0;
+      transform: translate(-40%, 40%);
+  }
 
   li {
     max-width: max-content;

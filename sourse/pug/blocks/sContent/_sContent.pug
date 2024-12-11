@@ -42,7 +42,7 @@ mixin imgMockup(i)
 
 
 mixin imgMockupMob(i)
-	.frame-mob-wrapper
+	.frame-mob-wrapper.overfl-h
 		+e.img-wrap.frame-mob.A(data-fancybox=`gallery-mob`, href=`img/sContent-bg-mob-${i}.png`)&attributes(attributes)
 			+img(`img/sContent-bg-mob-${i}.png`, 'bg').img
 			+img("img/sContent-frame-mob.png", 'bg').frame
@@ -58,17 +58,14 @@ mixin sContent3(p1, p2, p3)
 		.container.container-bigger
 			+e.row.row
 				+e.col.col-lg-6
-					+b.section-title.bigger
+					+b.section-title.bigger.mb
 						+e.top.fw-600.d-lg-none= p1
 						.h2=p2
 						p=p3
-						.sContent__btn-wrap.d-none.d-lg-block
-							+e.btn.btn.btn-primary(href='#') Подключить
-							+e.btn.btn.btn-link(href='#') Узнать условия
 				+e.col.col-lg-6
 					+greenCard
-				+e.col.d-lg-none
-					.sContent__btn-wrap
+				+e.col
+					.sContent__btn-wrap.abs
 						+e.btn.btn.btn-primary(href='#') Подключить
 						+e.btn.btn.btn-link(href='#') Узнать условия
 mixin greenCard

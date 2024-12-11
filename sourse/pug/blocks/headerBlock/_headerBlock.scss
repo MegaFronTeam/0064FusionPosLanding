@@ -62,7 +62,10 @@
   }
 
 	&__img-wrap {
-    @include block(368, 577);
+    @include block(328, 577);
+    @include media-breakpoint-up(sm) {
+      @include block(368, 577);
+    }
     max-width: rem(628);
     overflow: hidden;
     position: relative;
@@ -178,8 +181,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    height: 100%;
-    width: 30%;
+    width: 40%;
+    height: 85%;
     object-fit: cover;
     @include media-breakpoint-down(lg) {
       display: none;
@@ -363,8 +366,8 @@
     transform: translateX(20%);
     background:  linear-gradient(208deg, rgba(0, 0, 0, 0) 0%, rgba(0, 156, 243, .8) 50%);
     @include media-breakpoint-up(lg) {
-      width: 30%;
-      background:  linear-gradient(90deg, rgba(0, 0, 0,0) 0%, rgba(0, 156, 243, .8) 80%);
+      width: 40%;
+      background:  linear-gradient(130deg, rgba(0, 0, 0,0) 0%, rgba(0, 156, 243, .8) 80%);
     }
   }
 }

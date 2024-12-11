@@ -157,11 +157,12 @@ main {
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
   border-radius: $border-radius;
+  margin-bottom: rem(16);
 	@include media-breakpoint-up(lg) {
     border-radius: rem(48);
+    margin-bottom: rem(32);
   }
 
-  margin-bottom: rem(16);
   
 	@include media-breakpoint-up(xxl) {
     max-width: 1408px;
@@ -170,13 +171,9 @@ main {
   }
 }
 
-.section_gray {
-  background: $gray-800;
+.overfl-h {
+  overflow: hidden;
 }
-.section:not(.section_no-bg) {
-
-}
-
 .section-title {
 	margin-bottom: var(--sTPB);
 }
