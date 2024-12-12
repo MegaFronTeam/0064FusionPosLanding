@@ -10,6 +10,7 @@
 		--bs-gutter-x: #{rem(8)};
 		// @include media-breakpoint-up(md) {
 			--bs-gutter-y: #{rem(4)};
+      flex-wrap: nowrap;
       @include media-breakpoint-up(lg) {
         --bs-gutter-y: #{rem(0)};
       }
@@ -31,11 +32,6 @@
       }
     }
 	}
-
-  .col-auto:not(:first-child) {
-    // transition: opacity .3s;
-  }
-
 
 	.col.order-lg-0 {
     margin: 0;
@@ -66,12 +62,12 @@
       }
     }
     @include media-breakpoint-down(lg) {
-      max-width: rem(140);
+      max-width: rem(96);
       // padding-left: rem(8);
     }
     @media (max-width: 360px) {
       // display: none;
-      max-width: 32vw;
+      max-width: 18vw;
       padding-left: 0;
     }
 

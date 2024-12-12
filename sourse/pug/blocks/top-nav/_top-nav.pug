@@ -22,16 +22,16 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container-fluid
 			+e.row.row
-				//- .col-auto.d-xxl-none
-				//- 	+menu-toggle()
+				.col-auto.d-xxl-none
+					+menu-toggle()
 				.col-auto
 					+e.logo-wrap.A(href='#'): +img(src="img/svg/logo.svg", alt="")
 				.col.order-lg-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							//- +menu-toggle().d-xxl-none
+							+menu-toggle().d-xxl-none
 							+mnu()
-							a.d-md-none.tel(href="tel:88007757427") 8 (800) 775-74-27
+							a.d-sm-none.tel(href="tel:88007757427") 8 (800) 775-74-27
 				.col-auto
 					+e.links-wrap 
 						a.tel(href="tel:88007757427") 8 (800) 775-74-27
