@@ -57,6 +57,9 @@
         transform: translate(40%, 50%);
         background: $primary;
       }
+      @include media-breakpoint-up(xl) {
+        width: rem(628);
+      }
     }
   }
 

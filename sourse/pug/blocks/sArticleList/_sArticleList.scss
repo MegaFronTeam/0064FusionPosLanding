@@ -39,6 +39,9 @@
       filter: blur(120px);
       background: $primary;
     }
+    @include media-breakpoint-up(xl) {
+      width: rem(628);
+    }
   }
   &:after {
     top: 0;
@@ -48,7 +51,7 @@
   &:before {
     left: 0;
     bottom: 0;
-      transform: translate(-40%, 40%);
+    transform: translate(-40%, 40%);
   }
 
   li {
